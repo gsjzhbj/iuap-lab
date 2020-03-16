@@ -11,7 +11,7 @@ public class AdminController {
     Logger logger= LoggerFactory.getLogger(SystemConfig.SYSTEM_LOG_NAME);
     @RequestMapping("/admin")
     public String index(){
-        
+
         return "templates/admin/index";
     }
 }

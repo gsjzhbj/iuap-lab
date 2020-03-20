@@ -42,6 +42,7 @@ public class User implements Comparable{
         testListSort(user1,user2);
 
     }
+    //利用集合工具类排序
     public static void testListSort(User user1,User user2){
         List<User> list=new ArrayList<>();
         list.add(user1);

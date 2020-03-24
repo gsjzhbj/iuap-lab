@@ -5,13 +5,12 @@ import com.yonyou.iuap.train.lab.domain.bean.MetaUser;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @RestController
 public class HeapTestController {
     private List<MetaUser> userList = new ArrayList<>();
+    private List<Map> mapList=new ArrayList<>();
     private List<Class<?>> classList = new ArrayList<Class<?>>();
 
     /**
@@ -24,6 +23,9 @@ public class HeapTestController {
         while (true){
             userList.add(new MetaUser(i++, UUID.randomUUID().toString()));
         }
+//        for(int j=0;j<1000000;j++){
+//            mapList.add(new HashMap());
+//        }
     }
 
     /**

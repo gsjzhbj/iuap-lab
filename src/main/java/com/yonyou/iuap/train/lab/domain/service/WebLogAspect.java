@@ -13,13 +13,17 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
+/***
+ * AOP切面
+ * 场景：日志记录，性能统计，安全控制，事务处理，异常处理等等。
+ */
 @Aspect
 @Component
 public class WebLogAspect {
     private static final Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
 
     /**
-     * 指定 controller 包下的注解
+     * 切入点 指定 controller 包下的注解
      * */
     @Pointcut("execution( * com.yonyou.iuap.train.lab.controller.*.*(..))")//两个..代表所有子目录，最后括号里的两个..代表所有参数
     public void logPointCut() {
